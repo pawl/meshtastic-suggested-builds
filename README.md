@@ -25,7 +25,7 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 ### Parts List
 - **Heltec WiFi LoRa 32 V3 Board**: As above.
 - **Antenna**: Highly recommended Linx ANT-916-CW-HW-SMA for portable nodes [Available here](https://www.mouser.com/ProductDetail/712-ANT-916-CW-HWSMA).
-- **Case**: Alley Chat HT Pocket Case, available for purchase at multiple locations: [Goods by Pratik](https://goodsbypratik.etsy.com/listing/1733566732), [Etsy Listing](https://www.etsy.com/listing/1765871840), [3G3D Printing](https://3g3dprinting.etsy.com/listing/1704048054), [Travis Edson](https://travisedson.com/shop/product/alleychat-ht-pocket-case/), or for UK customers, [3D Chicken](https://3dchicken.co.uk/products/heltec-v3-ht-pocket-the-worlds-smallest-heltec-v3-case).
+- **Case**: [Alley Chat HT Pocket Case[(https://www.printables.com/model/920722-alley-chat-ht-pocket-heltec-lora-32-v3-case-by-all), available for purchase at multiple locations: [Goods by Pratik](https://goodsbypratik.etsy.com/listing/1733566732), [Etsy Listing](https://www.etsy.com/listing/1765871840), [3G3D Printing](https://3g3dprinting.etsy.com/listing/1704048054), [Travis Edson](https://travisedson.com/shop/product/alleychat-ht-pocket-case/), or for UK customers, [3D Chicken](https://3dchicken.co.uk/products/heltec-v3-ht-pocket-the-worlds-smallest-heltec-v3-case).
 - **Battery Stability**: A cardboard shim may be needed inside the case to secure the 1200mAh battery from moving around.
 
 ### Pros
