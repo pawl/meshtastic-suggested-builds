@@ -38,6 +38,8 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 
 ## Solar Node Setup
 
+TODO: Enclosure and weatherproofing still under development. (Might use [austinmesh.org's suggestions](https://www.austinmesh.org/devices/#parts-list).)
+
 ### Parts List
 - **RAKwireless WisBlock Meshtastic Starter Kit US915**: [RAK Wireless Kit](https://store.rokland.com/products/rak-wireless-wisblock-meshtastic-starter-kit) (SKU 116016).
 - **Antenna**: ALFA AOA-915-5ACM Omni Outdoor 915MHz Antenna [Available here](https://store.rokland.com/products/alfa-aoa-915-5acm-5-dbi-omni-outdoor-915mhz-802-11ah-mini-antenna-for-lora-halow-application).
@@ -49,7 +51,7 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 - High elevation potential for clear line of sight.
 
 ### Cons
-- Enclosure and weatherproofing still under development.
+- TODO
 
 ## Reference Links
 - [Meshtastic Antenna Testing GitHub](https://github.com/meshtastic/antenna-reports?tab=readme-ov-file) for antenna performance analysis.
