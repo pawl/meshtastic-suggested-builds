@@ -7,7 +7,7 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 
 ### Parts List
 - **Heltec WiFi LoRa 32 V3 Board**: [Heltec Kit](https://muzi.works/products/heltec-kit) includes the board, U.FL to SMA pigtail cable, stubby antenna (not recommended for use), and a 1200mAh battery.
-- **Antenna**: Recommended 17cm GIZONT from [AliExpress](https://www.aliexpress.us/item/3256804421300249.html) or 20cm GIZONT from [AliExpress](https://www.aliexpress.us/item/3256806172931647.html) for improved performance.
+- **Antenna**: Recommended [17cm GIZONT](https://www.aliexpress.us/item/3256804421300249.html) or [20cm GIZONT](https://www.aliexpress.us/item/3256806172931647.html) from AliExpress for improved performance.
 - **Case**: The most popular 3D printable Meshtastic case, [H1 Case for Heltec V3](https://www.printables.com/model/741974-h1-case-for-heltec-v3-running-meshtastic), created by musi.works and also available for purchase at [muzi.works](https://muzi.works/products/h1-case-for-heltec-v3-running-meshtastic).
 
 ### Setup Notes
