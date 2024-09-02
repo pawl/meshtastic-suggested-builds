@@ -14,8 +14,8 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 - **Flashing the Device**: The Heltec V3 needs to be flashed for Meshtastic compatibility. Use the Meshtastic flasher tool available at [Meshtastic Flasher](https://flasher.meshtastic.org/).
 
 ### Pros
-- Integrated WiFi, Bluetooth, and LoRa connectivity.
-- Compact and sturdy case design, updated for better component fit.
+- Compact design that's very portable.
+- Very popular radio board with lots of community support.
 
 ### Cons
 - Significant heat generation near the charging port when the battery is connected.
@@ -29,8 +29,7 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 - **Battery Stability**: A cardboard shim may be needed inside the case to secure the 1200mAh battery from moving around.
 
 ### Pros
-- Supports a wider range of high-performance antennas.
-- Enhanced portability and signal reach with a high-quality antenna.
+- Supports a wider range of antennas.
 
 ### Cons
 - Less compact due to the antenna protruding from the top.
