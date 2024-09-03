@@ -16,7 +16,7 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 - Very popular radio board with lots of community support.
 
 ### Cons
-- Significant heat generation near the charging port when the battery is connected.
+- Significant heat generation near the charging port while charging with the battery connected. [More details](https://www.reddit.com/r/meshtastic/comments/1daiee2/heltec_v3_overheats_with_battery_attached/)
 
 ## Build 2: Heltec V3 with Linx Antenna
 
