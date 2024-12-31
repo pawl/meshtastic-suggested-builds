@@ -6,8 +6,8 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 ### Parts List
 - **Heltec Mesh Node T114 with Display**: Previously available at [muzi.works](https://muzi.works/products/heltec-mesh-node-t114), but now best sourced directly from [Heltec](https://heltec.org/project/mesh-node-t114/).
 - **GPS Module** (optional): [Heltec GPS Module for Mesh Node T114](https://muzi.works/products/heltec-gps-module-for-mesh-node-t114).
-- **Battery**: [1200mAh battery from musi.works](https://muzi.works/products/h1-battery), specifically designed to fit within Meshtastic devices.
-- **Case**: [H2T Case for Heltec T114 with GPS](https://www.printables.com/model/982046-h2t-case-for-heltec-t114-with-gps-running-meshtastic), allows for a wider range of antennas with wider bases.
+- **Battery**: [1200mAh battery from musi.works](https://muzi.works/products/h1-battery)
+- **Case**: [H2T Case for Heltec T114 with GPS](https://www.printables.com/model/982046-h2t-case-for-heltec-t114-with-gps-running-meshtastic), allows for a wider range of antennas with wider bases compared to the previous H1 version for the Heltec V3.
 - **Antenna**: Highly recommended Linx ANT-916-CW-HW-SMA for portable nodes [Available here](https://www.mouser.com/ProductDetail/712-ANT-916-CW-HWSMA).
 
 ### Pros
