@@ -57,7 +57,7 @@ Based on: [austinmesh.org's Building a Solar-Powered Repeater for Meshtastic](ht
 - Uses powerful, outdoor-rated antenna for greater signal coverage.
 
 ### Cons
-- Requires permanent installation location.
+- Requires being indoors (preferrably near a window) and plugged into power.
 
 ## Reference Links
 - [Meshtastic Antenna Testing GitHub](https://github.com/meshtastic/antenna-reports?tab=readme-ov-file) for antenna performance analysis.
