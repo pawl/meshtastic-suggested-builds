@@ -26,14 +26,17 @@ Based on: [austinmesh.org's Building a Solar-Powered Repeater for Meshtastic](ht
   - Chosen for faster shipping and because more 3D printed mounts exist for this size.
   - **Mounting Bracket**: 3D printed bracket for Soshine 6W solar panel [Available on Printables](https://www.printables.com/model/223030-bracket-mount-for-soshine-6w-5v-usb-solar-panel).
     - Requires M4 nuts and bolts to attach the panel.
+  - **USB-A to USB-C Cable**: Cable Matters USB-C Adapter [Available on Amazon](https://www.amazon.com/Cable-Matters-Adapter-USB-C-Inches/dp/B00UUBQ0U8) for connecting the solar panel to the enclosure.
 - **Enclosure**: Junction Box, ABS Plastic, IP65 Waterproof Dustproof Universal Electrical Enclosure [Available on Amazon](https://www.amazon.com/LMioEtool-Dustproof-Waterproof-Electrical-150mmx100mmx70m/dp/B07KXRW62F).
   - Clamps provide a tighter seal compared to screw-based enclosures, and are easier to re-open.
   - **Vent**: For moisture release [Available on Amazon](https://www.amazon.com/Dusproof-Waterproof-Lighting-Breather-Pressure/dp/B0BKY2LLLV).
   - **Drill Bit**: For drilling holes in the enclosure [Available on Amazon](https://www.amazon.com/SALI-Tungsten-Carbide-Titanium-Plated-Stainless/dp/B0CG94QCJM).
   - **Sealing Tape**: For sealing around the antenna connection and where the solar panel connects to the exterior [Available on Amazon](https://www.amazon.com/Proxicast-Pro-Grade-Weatherproof-Self-Fusing-Electrical/dp/B00K5GW67O).
 - **Battery**: Voltaic Systems V25 USB Battery Backup [Available on Amazon](https://www.amazon.com/Voltaic-Systems-Formerly-Battery-Samsung/dp/B07ZS3WYZY).
-  - Originally expected to prevent voltage drops.
-- **Micro USB Extension**: For connecting the solar panel to the enclosure [Available on Amazon](https://www.amazon.com/Kework-Extension-Motorcycle-Dashboard-Transferring/dp/B082HZKVP1).
+  - Requires a USB-C to USB-A cable to connect the battery to the RAK device inside the enclosure.
+- **USB-C Flush Mount Cable**: Kework USB Type C Mount, 0.3 Meter USB-C Male to Female Flush Mount Panel Mount Extension AUX Cable [Available on Amazon](https://www.amazon.com/Kework-Extension-Motorcycle-Dashboard-Transferring/dp/B082HZKVP1).
+  - The USB-C male end is connected to the battery to power it.
+  - The USB-C female end is mounted flush on the enclosure to connect to the solar panel via the USB-A to USB-C cable. This offers a more weather-resistant solution compared to using a cable gland to route the cable directly, as suggested in the Austin Mesh guide.
 - **WisBlock Mount**: For securing the RAK board inside the enclosure [Available on Printables](https://www.printables.com/model/891096-rak19007-wisblock-base-board-mount).
 
 ### Pros
