@@ -23,12 +23,16 @@ Based on: [austinmesh.org's Building a Solar-Powered Repeater for Meshtastic](ht
 - **RAKwireless WisBlock Meshtastic Starter Kit US915**: [RAK Wireless Kit](https://store.rokland.com/products/rak-wireless-wisblock-meshtastic-starter-kit) (SKU 116016).
 - **Antenna**: 5.8 dBi N-Male Omni Outdoor Helium 915 MHz Antenna [Available here](https://store.rokland.com/products/5-8-dbi-n-male-omni-outdoor-915-mhz-antenna-large-profile-32-height-for-helium-rak-miner-2-nebra-indoor-bobcat).
 - **Solar Panel**: Soshine Mini Solar Panel - USB Solar Panel Charger 5v 6w [Available on Amazon](https://www.amazon.com/Soshine-Mini-Solar-Panel-Monocrystalline/dp/B099RSLNZ4).
+  - Chosen for faster shipping and because more 3D printed mounts exist for this size.
   - **Mounting Bracket**: 3D printed bracket for Soshine 6W solar panel [Available on Printables](https://www.printables.com/model/223030-bracket-mount-for-soshine-6w-5v-usb-solar-panel).
+    - Requires M4 nuts and bolts to attach the panel.
 - **Enclosure**: Junction Box, ABS Plastic, IP65 Waterproof Dustproof Universal Electrical Enclosure [Available on Amazon](https://www.amazon.com/LMioEtool-Dustproof-Waterproof-Electrical-150mmx100mmx70m/dp/B07KXRW62F).
+  - Clamps provide a tighter seal compared to screw-based enclosures, and are easier to re-open.
   - **Vent**: For moisture release [Available on Amazon](https://www.amazon.com/Dusproof-Waterproof-Lighting-Breather-Pressure/dp/B0BKY2LLLV).
   - **Drill Bit**: For drilling holes in the enclosure [Available on Amazon](https://www.amazon.com/SALI-Tungsten-Carbide-Titanium-Plated-Stainless/dp/B0CG94QCJM).
-  - **Sealing Tape**: For antenna and solar panel connections [Available on Amazon](https://www.amazon.com/Proxicast-Pro-Grade-Weatherproof-Self-Fusing-Electrical/dp/B00K5GW67O).
+  - **Sealing Tape**: For sealing around the antenna connection and where the solar panel connects to the exterior [Available on Amazon](https://www.amazon.com/Proxicast-Pro-Grade-Weatherproof-Self-Fusing-Electrical/dp/B00K5GW67O).
 - **Battery**: Voltaic Systems V25 USB Battery Backup [Available on Amazon](https://www.amazon.com/Voltaic-Systems-Formerly-Battery-Samsung/dp/B07ZS3WYZY).
+  - Originally expected to prevent voltage drops.
 - **Micro USB Extension**: For connecting the solar panel to the enclosure [Available on Amazon](https://www.amazon.com/Kework-Extension-Motorcycle-Dashboard-Transferring/dp/B082HZKVP1).
 - **WisBlock Mount**: For securing the RAK board inside the enclosure [Available on Printables](https://www.printables.com/model/891096-rak19007-wisblock-base-board-mount).
 
@@ -45,7 +49,7 @@ Based on: [austinmesh.org's Building a Solar-Powered Repeater for Meshtastic](ht
 ### Parts List
 - **Heltec WiFi LoRa 32 V3 Board**: [Heltec Kit](https://muzi.works/products/heltec-kit).
 - **Antenna**: 3 dBi N-Male RAK Wireless Fiberglass Outdoor Antenna [Available here](https://store.rokland.com/products/3-dbi-rak-brand-fiberglass-outdoor-antenna-bracket-mount-for-rak-bobcat-sensecap).
-- **Case**: RAK19007RAK5005 case for Meshtastic N-type antenna, only used n-type-rak-frame.stl file for the frame [Available on Printables](https://www.printables.com/model/997695-rak19007rak5005-case-for-meshtastic-n-type-antenna).
+- **Case**: for Meshtastic N-type antenna, only used n-type-rak-frame.stl file for the frame [Available on Printables](https://www.printables.com/model/997695-rak19007rak5005-case-for-meshtastic-n-type-antenna).
 - **Coaxial Pigtail Jumper Cable**: Proxicast 8 inch U.FL to N Female cable [Available on Amazon](https://www.amazon.com/Proxicast-Low-Loss-Coaxial-Pigtail-Bluetooth/dp/B09GJJSXX8).
 
 ### Pros
