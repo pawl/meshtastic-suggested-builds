@@ -1,11 +1,25 @@
 # Meshtastic Suggested Builds
 This is an unofficial compilation of personal and community-sourced Meshtastic builds.
 
-## Build 1: Portable Heltec V3 Setup
+## Build 1: Heltec T114 with GPS and Display
 
 ### Parts List
-- **Heltec WiFi LoRa 32 V3 Board**: [Heltec Kit](https://muzi.works/products/heltec-kit) includes the board, U.FL to SMA pigtail cable, stubby antenna (not recommended for use), and a 1200mAh battery.
+- **Heltec Mesh Node T114 with Display**: Previously available at [muzi.works](https://muzi.works/products/heltec-mesh-node-t114), but now best sourced directly from [Heltec](https://heltec.org/project/mesh-node-t114/).
+- **GPS Module** (optional): [Heltec GPS Module for Mesh Node T114](https://muzi.works/products/heltec-gps-module-for-mesh-node-t114).
+- **Battery**: [1200mAh battery from musi.works](https://muzi.works/products/h1-battery)
+- **Case**: Fits a wider range of antennas, [H2T Case for Heltec T114 with GPS](https://www.printables.com/model/982046-h2t-case-for-heltec-t114-with-gps-running-meshtastic).
+- **Antenna**: Highly recommended Linx ANT-916-CW-HW-SMA for portable nodes [Available here](https://www.mouser.com/ProductDetail/712-ANT-916-CW-HWSMA).
+
+### Pros
+- Improved battery life and reduced heating issues compared to previous models.
+- Additional button enhances navigation between info pages without needing to connect to a phone.
+
+## Build 2: Portable Heltec V3 Setup
+
+### Parts List
+- **Heltec WiFi LoRa 32 V3 Board**: [Heltec Kit](https://muzi.works/products/heltec-kit) includes the board, U.FL to SMA pigtail cable, stubby antenna (not recommended for use).
 - **Antenna**: Recommended [17cm GIZONT](https://www.aliexpress.us/item/3256804421300249.html) or [20cm GIZONT](https://www.aliexpress.us/item/3256806172931647.html) from AliExpress for improved range.
+- **Battery**: Refer to Build 1 for battery details.
 - **Case**: The most popular 3D printable Meshtastic case, [H1 Case for Heltec V3](https://www.printables.com/model/741974-h1-case-for-heltec-v3-running-meshtastic), created by musi.works and also available for purchase at [muzi.works](https://muzi.works/products/h1-case-for-heltec-v3-running-meshtastic).
 
 ### Setup Notes
@@ -18,20 +32,20 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 ### Cons
 - Significant heat generation near the charging port while charging with the battery connected. [More details](https://www.reddit.com/r/meshtastic/comments/1daiee2/heltec_v3_overheats_with_battery_attached/)
 
-## Build 2: Heltec V3 with Linx Antenna
+## Build 3: Heltec V3 with Linx Antenna
 
 ### Parts List
 - **Heltec WiFi LoRa 32 V3 Board**: As above.
 - **Antenna**: Highly recommended Linx ANT-916-CW-HW-SMA for portable nodes [Available here](https://www.mouser.com/ProductDetail/712-ANT-916-CW-HWSMA).
 - **Case**: [Alley Chat HT Pocket Case](https://www.printables.com/model/920722-alley-chat-ht-pocket-heltec-lora-32-v3-case-by-all), available for purchase at multiple locations: [Goods by Pratik](https://goodsbypratik.etsy.com/listing/1733566732), [Etsy Listing](https://www.etsy.com/listing/1765871840), [3G3D Printing](https://3g3dprinting.etsy.com/listing/1704048054), [Travis Edson](https://travisedson.com/shop/product/alleychat-ht-pocket-case/), or for UK customers, [3D Chicken](https://3dchicken.co.uk/products/heltec-v3-ht-pocket-the-worlds-smallest-heltec-v3-case).
-- **Battery Stability**: A cardboard shim may be needed inside the case to secure the 1200mAh battery from moving around.
+- **Battery Stability**: A cardboard shim may be needed inside the case to secure the 1200mAh battery from moving around. Refer to Build 1 for battery details.
 
 ### Pros
 - Supports a wider range of antennas.
 
 ### Cons
 - Less compact due to the antenna protruding from the top.
-- Retains the power efficiency and heat issues observed in Build 1.
+- Retains the power efficiency and heat issues observed in previous builds.
 
 ## Solar Node Setup
 
