@@ -12,7 +12,6 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 
 ### Pros
 - Improved battery life compared to the older v3 model and fixes heat issues while charging with the battery plugged in.
-- Additional button improves navigation between info pages without needing to connect to a phone.
 - Adds another power input for solar which the v3 didn't have. (haven't tested this yet)
 
 ## Build 2: Solar Node Setup
