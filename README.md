@@ -39,8 +39,7 @@ Based on: [austinmesh.org's Building a Solar-Powered Repeater for Meshtastic](ht
 - **WisBlock Mount**: For securing the RAK board inside the enclosure [Available on Printables](https://www.printables.com/model/891096-rak19007-wisblock-base-board-mount).
 
 ### Pros
-- Self-sustaining with solar power for long-term deployment.
-- High elevation potential for clear line of sight.
+- Doesn't require being plugged into a power outlet, so you can potentially put it on a roof for better line of sight.
 
 ### Cons
 - Not reliable as-is, experiencing voltage drops and system brownouts.
