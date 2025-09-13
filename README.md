@@ -34,8 +34,10 @@ Based on: [austinmesh.org's Building a Solar-Powered Repeater for Meshtastic](ht
 - **Power Management**: Waveshare Solar Power Manager Module (D) [Available here](https://www.waveshare.com/solar-power-manager-d.htm).
   - Supports 6V~24V Solar Panel and Type-C Power Adapter, 5V/3A Regulated Output.
   - **Battery**: 18650 LG MJ1 INR18650-MJ1 3500mAh High Discharge Protected Button Top batteries [Available here](https://illumn.com/18650-lg-mj1-inr18650-mj1-high-discharge-protected-button-top.html).
+  - **Connection**: Use the Waveshare 5V output pins connected to the RAK Solar-In port (not USB-C) for proper voltage regulation and brownout protection.
   - **Note**: Previously used Voltaic Systems V25 USB Battery Backup, but it caused voltage instability and brownouts requiring device reconfiguration. The Waveshare module has been stable for 9+ months.
   - **Important**: Do NOT use the USB-C port for charging the device directly, as this can cause voltage instability and device resets requiring reconfiguration in the app.
+  - **Reference**: [Detailed explanation of proper power connection](https://www.reddit.com/r/meshtastic/comments/1fv5zli/comment/lq6a05s/) for brownout protection and battery management.
 - **Solar Panel Connection**: Cut off the USB connector from the solar panel cable and strip the positive and negative wires to connect directly to the Waveshare module's dedicated SOLAR IN terminal blocks (6V~24V input).
 - **USB Flush Mount Cable**: Kework USB Type C Mount, 0.3 Meter USB-C Male to Female Flush Mount Panel Mount Extension AUX Cable [Available on Amazon](https://www.amazon.com/Kework-Extension-Motorcycle-Dashboard-Transferring/dp/B082HZKVP1).
   - Provides waterproof connection point on enclosure bottom. Any USB connector type works since the end gets cut off for direct wiring to solar terminal blocks.
