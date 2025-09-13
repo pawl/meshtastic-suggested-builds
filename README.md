@@ -31,19 +31,22 @@ Based on: [austinmesh.org's Building a Solar-Powered Repeater for Meshtastic](ht
   - **Vent**: For moisture release [Available on Amazon](https://www.amazon.com/Dusproof-Waterproof-Lighting-Breather-Pressure/dp/B0BKY2LLLV).
   - **Drill Bit**: For drilling holes in the enclosure [Available on Amazon](https://www.amazon.com/SALI-Tungsten-Carbide-Titanium-Plated-Stainless/dp/B0CG94QCJM).
   - **Sealing Tape**: For sealing around the antenna connection and where the solar panel connects to the exterior [Available on Amazon](https://www.amazon.com/Proxicast-Pro-Grade-Weatherproof-Self-Fusing-Electrical/dp/B00K5GW67O).
-- **Battery**: Voltaic Systems V25 USB Battery Backup [Available on Amazon](https://www.amazon.com/Voltaic-Systems-Formerly-Battery-Samsung/dp/B07ZS3WYZY).
-  - Requires a USB-C to USB-A cable to connect the battery to the RAK device inside the enclosure.
-- **USB-C Flush Mount Cable**: Kework USB Type C Mount, 0.3 Meter USB-C Male to Female Flush Mount Panel Mount Extension AUX Cable [Available on Amazon](https://www.amazon.com/Kework-Extension-Motorcycle-Dashboard-Transferring/dp/B082HZKVP1).
-  - The USB-C male end is connected to the battery to power it.
-  - The USB-C female end is mounted flush on the enclosure to connect to the solar panel via the USB-A to USB-C cable. This offers a more weather-resistant solution compared to using a cable gland to route the cable directly, as suggested in the Austin Mesh guide.
+- **Power Management**: Waveshare Solar Power Manager Module (D) [Available here](https://www.waveshare.com/solar-power-manager-d.htm).
+  - Supports 6V~24V Solar Panel and Type-C Power Adapter, 5V/3A Regulated Output.
+  - **Battery**: 18650 LG MJ1 INR18650-MJ1 3500mAh High Discharge Protected Button Top batteries [Available here](https://illumn.com/18650-lg-mj1-inr18650-mj1-high-discharge-protected-button-top.html).
+  - **Note**: Previously used Voltaic Systems V25 USB Battery Backup, but it caused voltage instability and brownouts requiring device reconfiguration. The Waveshare module has been stable for 9+ months.
+  - **Important**: Do NOT use the USB-C port for charging the device directly, as this can cause voltage instability and device resets requiring reconfiguration in the app.
+- **Solar Panel Connection**: Cut off the USB connector from the solar panel cable and strip the positive and negative wires to connect directly to the Waveshare module's dedicated SOLAR IN terminal blocks (6V~24V input).
+- **USB Flush Mount Cable**: Kework USB Type C Mount, 0.3 Meter USB-C Male to Female Flush Mount Panel Mount Extension AUX Cable [Available on Amazon](https://www.amazon.com/Kework-Extension-Motorcycle-Dashboard-Transferring/dp/B082HZKVP1).
+  - Provides waterproof connection point on enclosure bottom. Any USB connector type works since the end gets cut off for direct wiring to solar terminal blocks.
 - **WisBlock Mount**: For securing the RAK board inside the enclosure [Available on Printables](https://www.printables.com/model/891096-rak19007-wisblock-base-board-mount).
+- **Waveshare Module Mount**: 3D printed adapters to mount the Waveshare Solar Power Manager above the WisBlock to save space [Available on Printables](https://www.printables.com/model/890829-meshtastic-rak-waveshare-solar-enclosure-adapters).
 
 ### Pros
 - Doesn't require being plugged into a power outlet, so you can potentially put it on a roof for better line of sight.
 
 ### Cons
-- Not reliable as-is, experiencing voltage drops and system brownouts.
-  - Currently exploring using a larger solar panel or swapping the battery with protected 18650 cells and the [Waveshare Solar Power Manager Module (D)](https://www.waveshare.com/solar-power-manager-d.htm) to hopefully mitigate voltage issues.
+- Currently investigating limited range issues.
 
 ## Build 3: Non-Portable Heltec V3
 
