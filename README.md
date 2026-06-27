@@ -50,6 +50,15 @@ Based on: [austinmesh.org's Building a Solar-Powered Repeater for Meshtastic](ht
 ### Cons
 - Currently investigating limited range issues.
 
+### Planned Upgrades
+
+Moving this node to the RAK 1W booster to address the range issue. Parts and reasoning for when I order:
+
+- WisMesh 1W Booster Kit (RAK10724), 915 MHz: [link](https://store.rakwireless.com/products/meshtastic-1w-lora-booster-kit-rak3401). Much higher TX power plus better receive sensitivity, which is the main fix for the range problem. Built on the same RAK19007 base board, so the enclosure, mounts, antenna, and pigtail all carry over. Ordering from RAK directly because Rokland has been out of stock for months.
+- Solar panel upgrade to [Voltaic 9W 18V ETFE (P108)](https://voltaicsystems.com/9-watt-18v-panel-etfe/), with the [BK103 bracket](https://voltaicsystems.com/BK103/) and [ETFE screw set](https://voltaicsystems.com/mount-set-etfe/). The 1W board draws more than the old RAK4631, so the 6W panel is undersized. Going with the 18V version over the 6V one because the Waveshare wants a 6 to 24V input, and a 6V panel drops below that floor in Dallas heat.
+- Base-board buffer LiPo: reuse the spare 1800mAh muzi.works 604050 cell I already have. The 1W radio needs a battery on the board to absorb the transmit surge and can't run off the 3.3V rail. The Waveshare's 5V then feeds the booster's EX_5V input rather than the Solar-In port. Caveat: that cell probably has a Heltec-style 1.25mm plug with reversed polarity, so confirm polarity and re-terminate to JST PH 2.0 (RAK polarity) before connecting. The 18650s stay on the Waveshare as the main storage.
+- Optional, only if range is still short after the swap: a [915 MHz cavity filter](https://acasom.com/products/915mhz-cavity-filter-for-helium-network-amplifier-filter-sma-type-high-out-band-rejection), in case nearby transmitters are desensitizing the receiver.
+
 ## Build 3: Non-Portable Heltec V3
 
 ### Parts List
