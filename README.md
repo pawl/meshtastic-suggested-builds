@@ -14,6 +14,17 @@ This is an unofficial compilation of personal and community-sourced Meshtastic b
 - Improved battery life compared to the older v3 model and fixes heat issues while charging with the battery plugged in.
 - Adds another power input for solar which the v3 didn't have. (haven't tested this yet)
 
+### Planned Upgrades
+
+Main goal is the charging problem: more runtime so it needs charging less often.
+
+- Battery upgrade (ordered): swapping the 1200mAh h1-battery for the [muzi.works H2T battery](https://muzi.works/products/h2t-battery), 2000mAh (8 x 31 x 61.5mm). Same 1.25mm connector and it fits the existing H2T case, so it's a straight swap with no rework, about two-thirds more capacity.
+- GPS is a bigger lever than capacity. The GPS module is the dominant drain (the T114 runs 100+ hours with GPS off versus dozens of hours with it on). Plan to set GPS to a fixed position or an occasional fix instead of continuous, and add a screen timeout. Combined with the 2000mAh cell that should move runtime from a day or two up to multiple days.
+- Considered, not doing yet: reprinting a case with a physical power switch (Andrey Lifar 103450 design, or zerofox3D Nibbler2) so it can be fully off in storage instead of powering down through the app. Needs a narrower 103450 cell and a reprint, so only worth it if standby drain gets annoying. Note the spare 1800mAh 604050 cell does not fit any of these cases (too wide at 40mm); it's earmarked as the solar node's buffer cell instead.
+- Optional QoL: a magnetic USB-C charging adapter, since the real issue is forgetting to plug in and this lowers the effort.
+
+Antenna stays. The Linx ANT-916 is already a strong portable antenna.
+
 ## Build 2: Solar Node Setup
 
 Based on: [austinmesh.org's Building a Solar-Powered Repeater for Meshtastic](https://www.austinmesh.org/devices/#solar)
@@ -48,16 +59,35 @@ Based on: [austinmesh.org's Building a Solar-Powered Repeater for Meshtastic](ht
 - Doesn't require being plugged into a power outlet, so you can potentially put it on a roof for better line of sight.
 
 ### Cons
-- Currently investigating limited range issues.
+- Currently investigating limited range issues (the 1W booster upgrade below is the main fix for this).
 
 ### Planned Upgrades
 
-Moving this node to the RAK 1W booster to address the range issue. Parts and reasoning for when I order:
+Moving this node to the RAK 1W booster to fix the range issue, and rebuilding into a bigger enclosure because the current one is too cramped for the larger board plus a buffer battery. Parts, status, and reasoning below.
 
-- WisMesh 1W Booster Kit (RAK10724), 915 MHz: [link](https://store.rakwireless.com/products/meshtastic-1w-lora-booster-kit-rak3401). Much higher TX power plus better receive sensitivity, which is the main fix for the range problem. Built on the same RAK19007 base board, so the enclosure, mounts, antenna, and pigtail all carry over. Ordering from RAK directly because Rokland has been out of stock for months.
-- Solar panel upgrade to [Voltaic 9W 18V ETFE (P108)](https://voltaicsystems.com/9-watt-18v-panel-etfe/), with the [BK103 bracket](https://voltaicsystems.com/BK103/) and [ETFE screw set](https://voltaicsystems.com/mount-set-etfe/). The 1W board draws more than the old RAK4631, so the 6W panel is undersized. Going with the 18V version over the 6V one because the Waveshare wants a 6 to 24V input, and a 6V panel drops below that floor in Dallas heat.
-- Base-board buffer LiPo: reuse the spare 1800mAh muzi.works 604050 cell I already have. The 1W radio needs a battery on the board to absorb the transmit surge and can't run off the 3.3V rail. The Waveshare's 5V then feeds the booster's EX_5V input rather than the Solar-In port. Caveat: that cell probably has a Heltec-style 1.25mm plug with reversed polarity, so confirm polarity and re-terminate to JST PH 2.0 (RAK polarity) before connecting. The 18650s stay on the Waveshare as the main storage.
-- Optional, only if range is still short after the swap: a [915 MHz cavity filter](https://acasom.com/products/915mhz-cavity-filter-for-helium-network-amplifier-filter-sma-type-high-out-band-rejection), in case nearby transmitters are desensitizing the receiver.
+Radio and power:
+- WisMesh 1W Booster Kit (RAK10724), 915 MHz (have it): [link](https://store.rakwireless.com/products/meshtastic-1w-lora-booster-kit-rak3401). Much higher TX power plus better receive sensitivity from the built-in SAW filter and LNA, which is the main range fix. Built on the same RAK19007 base board, so the base-board mount and antenna carry over. Ordered from RAK directly since Rokland has been out of stock for months. The populated board (core module plus the separate 1W module in the next slot) is physically longer than the old RAK4631, which is part of why the old box no longer fits.
+- Buffer LiPo (have it): MakerFocus 3000mAh flat cell with a JST PH 2.0 plug already wired for RAK polarity. The 1W radio can't run off the base board's 3.3V rail and needs a battery on the board to absorb the transmit surge. Just having this connected is what unlocks full 1W. Chose 3000mAh on purpose: the base board charges a connected cell slowly, so a smaller buffer stays reliably topped, while the 18650s on the Waveshare stay the main storage. (This replaces the earlier plan to reuse the 1800mAh muzi 604050 cell; that cell is freed up and is too wide for the T114 cases anyway. The MakerFocus is worth $13 to skip the connector re-termination and polarity work.)
+- Power wiring change: feed the Waveshare 5V output into the booster's EX_5V input, not the base-board Solar-In as before, with the module power jumper set to EX_5V. EX_5V powers the whole stack and keeps the buffer charged. The 5V lead for this comes in the kit. Keep the 18650s on the Waveshare as the reservoir. Still do NOT charge through the base-board USB-C port.
+- Solar panel upgrade (have it): [Voltaic 9W 18V ETFE (P108)](https://voltaicsystems.com/9-watt-18v-panel-etfe/), with the [BK103 Large bracket](https://voltaicsystems.com/BK103/) and [ETFE screw set](https://voltaicsystems.com/mount-set-etfe/). The 1W board draws more than the RAK4631, so the 6W panel is undersized. Chose the 18V version over the 10W 6V one because the Waveshare needs a 6 to 24V input, and a 6V panel (peak around 5.7V) drops below that floor when hot. Wire it into the Waveshare SOLAR IN using the [Voltaic extension-with-leads](https://voltaicsystems.com/extension-with-exposed-leads) so the panel's own cable stays intact; watch polarity (confirm with a meter, do not trust wire color).
+
+Enclosure and mounting:
+- New enclosure (to buy): LMioEtool 220x170x110mm (8.7 x 6.7 x 4.3 inch), grey opaque cover, with the removable mounting plate. This is the larger size of the same LMioEtool line as the current box. The old 150x100x70 was a tight fit even for the RAK4631, and won't hold the longer 1W board plus the buffer cell with room to secure anything. Grey opaque, not clear: a clear lid on a Dallas roof is a greenhouse. The removable plate is the other reason to switch, since everything mounts on the bench and drops in, so drilling happens in an empty shell.
+- Cable entry: retire the USB-C flush-mount pass-through. The panel now wires straight into the Waveshare, so replace it with a PG9 cable gland (from a PG7/PG9/PG11 assortment). The Voltaic lead is thinner than the gland's minimum clamp, so build it up with a few turns of self-fusing tape before tightening. Mount the gland on the bottom face pointing down so water sheds off it. Two holes total in the new box: the N antenna bulkhead up top, and this gland on the bottom.
+- Internal mounting: screw-down saddle cable-tie mounts (to buy, black nylon, screw type not adhesive) fixed to the new plate, instead of relying on the grid. Adhesive-backed mounts let go in rooftop heat, so avoid those. Tie the 18650 holder and the buffer cell to the shaded lower area, not against the 1W module.
+
+Panel placement and heat (Dallas):
+- The panel can't sit directly over the box because the antenna exits the top of the enclosure. Mount the panel offset and slightly above the box, tilted about 35 degrees facing south. At summer noon the sun is nearly overhead, so a tilted panel drops its shadow almost straight down onto the box, which is the shade you want when heat is worst. The antenna runs straight up a few inches to the side of the panel edge so it stays clear of the panel's near field. With a roughly 3ft antenna, almost all of the radiating length is above the panel anyway, so shading the box is the priority over any tiny near-field concern.
+- Add a silica gel desiccant pack inside (Texas humidity), keep a moisture breather/vent, and consider running TX around 27 dBm instead of the full 30 to cut heat and power draw. The receive-sensitivity gain from the filtered front end holds regardless of TX level.
+
+Config:
+- Flash the firmware-rak3401-1watt build via [flasher.meshtastic.org](https://flasher.meshtastic.org/), erase/factory first, region US / 915 MHz. Set the power jumper to EX_5V. Role stays CLIENT (already is), not ROUTER, since a rooftop isn't a dominant enough site and a misplaced router consumes hops early. Never power the board on without the antenna connected, it can damage the RF stage at 1W.
+
+Build order: assemble and flash/config the board on the bench, drill the empty shell, then drop the loaded plate in and land the antenna and solar connections last.
+
+Optional, only if range is still short after the swap: a [915 MHz cavity filter](https://acasom.com/products/915mhz-cavity-filter-for-helium-network-amplifier-filter-sma-type-high-out-band-rejection), in case nearby transmitters are desensitizing the receiver. The booster's built-in SAW filter already helps, so hold off until the swap is tested.
+
+Carries over from the current build: Waveshare Solar Power Manager D, the 18650 LG MJ1 cells, the 5.8 dBi N-male antenna, and the spare U.FL to N pigtail (the RAK13302 uses an IPEX connector, so it fits).
 
 ## Build 3: Non-Portable Heltec V3
 
